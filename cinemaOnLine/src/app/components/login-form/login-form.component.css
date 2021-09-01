@@ -1,0 +1,47 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+.example-container{
+     /* border:  2px solid white;*/
+      width: max-content;
+      margin: 0 auto;
+      margin-top: 2%;
+}
+.example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+.container{
+    margin-top: 10%;
+    height: 60vh;
+}
+
+
+.title{
+    /*border: 2px solid brown;*/
+    width: max-content;
+    margin: 0 auto;
+}
+
+.border-form{
+    width: 30%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+}
+
+.validForm{
+  color: red;
+}
