@@ -1,0 +1,20 @@
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.each-cinema{
+    width: 25%;
+    height: 100%;
+}
+
+.each-cinema .card{
+    height: 100%;
+}
+
+.each-cinema .card img{
+    height: 50%;
+}
+

@@ -1,17 +1,9 @@
-<div class="container">
-    <div class="introduction">
-        <div class="title">
-            <h1>CINEMA TORINO</h1>
-        </div>
-        <div class="description">
-            <p>Guida alla programmazione dei film in uscita nelle sale cinematografiche di Torino.
-                Trova il cinema più vicino e gli orari dei film della settimana. Cerca in tutta la provincia di Torino ».</p>
-        </div>
-    </div>
+
+<div class="contenitore-carosello">
     <div class="carosello">
         <carousel>
             <slide>
-              <a routerLink="/movies"><img src="../../../assets/437207.jpg" alt="first slide" style="display: block; width: 100%;"></a>
+              <a routerLink="/movies"><img src="../../../assets/el-americano-the-movie-2014-cartoon.jpg" alt="first slide" style="display: block; width: 100%;"></a>
             </slide>
             <slide>
               <a routerLink="/movies"><img src="../../../assets/67-670663_hollywood-movie-poster-hd.jpg" alt="second slide" style="display: block; width: 100%;"></a>
@@ -19,7 +11,160 @@
             <slide>
               <a routerLink="/movies"><img src="../../../assets/poster-del-film-oblivion-sfondo-2048x1152_49.jpg" alt="third slide" style="display: block; width: 100%;"></a>
             </slide>
+            <slide>
+              <a routerLink="/movies"><img src="../../../assets/the-dark-knight-rises-poster-del-film-sfondo-2560x1440_51.jpg" alt="third slide" style="display: block; width: 100%;"></a>
+            </slide>
           </carousel>
     </div>
+</div>
+<div class="container">
+    <div class="introduction">
+        <div class="title">
+            <h1>CINEMA ONLINE</h1>
+        </div>
+        <div class="description">
+            <p>Guida alla programmazione dei film in uscita nelle sale cinematografiche di Torino.
+                Compra il tuo biglietto online e salta la fila alla biglietteria».</p>
+        </div>
+    </div>
+</div>
+<div class="container contenitore-sezione-centrale">
+    <div class="each-movie">
+        <div class="titolo-movie">
+            <span class="inside-titolo"><h2>---- Dracula Untold ----</h2></span>
+        </div>
+        <mat-drawer-container class="example-container-sidebar" autosize>
+            <mat-drawer #drawer class="example-sidenav" mode="side">
+                <ul>
+                    <li><span class="titolo-drawer">Genere:</span>Azione, Drammatico, Fantasy, Horror</li>
+                    <li><span class="titolo-drawer">Paese:</span> USA</li>
+                    <li><span class="titolo-drawer">Durata:</span>92 min</li>
+                    <li><span class="titolo-drawer">Distribuzione:</span> Universal Pictures Italia</li>
+                    <li><span class="titolo-drawer">Cinema:</span>The space Cinema</li>
+                </ul>
+                <div *ngIf="showFiller" class="example-button-row">
+                    <button class="each-button" mat-raised-button>18:15</button>
+                    <button class="each-button" mat-raised-button>20:15</button>
+                    <button class="each-button" mat-raised-button>22:15</button>
+                </div>
+                <button mat-button color="warn" (click)="showFiller = !showFiller" mat-raised-button>
+                    <span *ngIf="showFiller == false">Orari</span>
+                    <span *ngIf="showFiller == true">Nascondi orari</span>
+                  </button>
+                <mat-divider></mat-divider>
+            </mat-drawer>
+          
+            <div class="example-sidenav-content">
+                <img src="../../../assets/dracula-untold-2014-movie-banner-poster.jpg" alt="">
+              <button mat-button color="warn"  type="button" mat-button (click)="drawer.toggle()">
+               Info
+              </button>
+            </div>
+          </mat-drawer-container>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="each-movie">
+        <div class="titolo-movie">
+            <span class="inside-titolo"><h2>---- Il cavaliere oscuro - Il ritorno ----</h2></span>
+        </div>
+        <mat-drawer-container class="example-container-sidebar" autosize>
+            <mat-drawer #drawer2 class="example-sidenav" mode="side">
+                <ul>
+                    <li><span class="titolo-drawer">Genere:</span> Azione, Fantasy, Thriller</li>
+                    <li><span class="titolo-drawer">Paese:</span>USA</li>
+                    <li><span class="titolo-drawer">Durata:</span>165 min</li>
+                    <li><span class="titolo-drawer">Distribuzione:</span>Warner Bros</li>
+                    <li><span class="titolo-drawer">Cinema:</span>Lux</li>
+                </ul>
+                <div *ngIf="showFiller2" class="example-button-row">
+                    <button class="each-button" mat-raised-button>18:15</button>
+                    <button class="each-button" mat-raised-button>20:15</button>
+                    <button class="each-button" mat-raised-button>22:15</button>
+                </div>
+                <button mat-button color="warn" (click)="showFiller2 = !showFiller2" mat-raised-button>
+                    <span *ngIf="showFiller2 == false">Orari</span>
+                    <span *ngIf="showFiller2 == true">Nascondi orari</span>
+                  </button>
+                <mat-divider></mat-divider>
+            </mat-drawer>
+          
+            <div class="example-sidenav-content">
+            <img src="../../../assets/darknigth.jpg" alt="">
+              <button mat-button color="warn" type="button" mat-button (click)="drawer2.toggle()">
+               Info
+              </button>
+            </div>
+          </mat-drawer-container>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="each-movie">
+        <div class="titolo-movie">
+            <span class="inside-titolo"><h2>---- Oblivion ----</h2></span>
+        </div>
+        <mat-drawer-container class="example-container-sidebar" autosize>
+            <mat-drawer #drawer3 class="example-sidenav" mode="side">
+                <ul>
+                    <li><span class="titolo-drawer">Genere:</span>Avventura, Azione, Fantascienza</li>
+                    <li><span class="titolo-drawer">Paese:</span>USA</li>
+                    <li><span class="titolo-drawer">Durata:</span>110 min</li>
+                    <li><span class="titolo-drawer">Distribuzione:</span>Universal Pictures Italia</li>
+                    <li><span class="titolo-drawer">Cinema:</span>Romano</li>
+                </ul>
+                <div *ngIf="showFiller3" class="example-button-row">
+                    <button class="each-button" mat-raised-button>18:15</button>
+                    <button class="each-button" mat-raised-button>20:15</button>
+                    <button class="each-button" mat-raised-button>22:15</button>
+                </div>
+                <mat-divider></mat-divider>
+              <button mat-button color="warn" (click)="showFiller3 = !showFiller3" mat-raised-button>
+                <span *ngIf="showFiller3 == false">Orari</span>
+                <span *ngIf="showFiller3 == true">Nascondi orari</span>
+              </button>
+            </mat-drawer>
+          
+            <div class="example-sidenav-content">
+            <img src="../../../assets/Oblivion.jpeg" alt="">
+              <button mat-button color="warn"  type="button" mat-button (click)="drawer3.toggle()">
+               Info
+              </button>
+            </div>
+          </mat-drawer-container>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="each-movie">
+        <div class="titolo-movie">
+            <span class="inside-titolo"><h2>---- El americano ----</h2></span>
+        </div>
+        <mat-drawer-container class="example-container-sidebar" autosize>
+            <mat-drawer #drawer4 class="example-sidenav" mode="side">
+                <ul>
+                    <li><span class="titolo-drawer">Genere:</span>Cartone animato</li>
+                    <li><span class="titolo-drawer">Paese:</span>Mexico</li>
+                    <li><span class="titolo-drawer">Durata:</span>87 min</li>
+                    <li><span class="titolo-drawer">Distribuzione:</span>Never Landing Data Distribution</li>
+                    <li><span class="titolo-drawer">Cinema:</span>Romano</li>
+                </ul>
+                <div *ngIf="showFiller4" class="example-button-row">
+                    <button class="each-button" mat-raised-button>10:15</button>
+                    <button class="each-button" mat-raised-button>12:15</button>
+                    <button class="each-button" mat-raised-button>15:15</button>
+                </div>
+                <button mat-button color="warn" (click)="showFiller4 = !showFiller4" mat-raised-button>
+                    <span *ngIf="showFiller4 == false">Orari</span>
+                    <span *ngIf="showFiller4 == true">Nascondi orari</span>
+                  </button>
+                <mat-divider></mat-divider>
+            </mat-drawer>
+          
+            <div class="example-sidenav-content">
+            <img src="../../../assets/el-americano-the-movie-2014-cartoon.jpg" alt="">
+              <button mat-button color="warn" type="button" mat-button (click)="drawer4.toggle()">
+               Info
+              </button>
+            </div>
+          </mat-drawer-container>
+    </div>
+    <mat-divider></mat-divider>
+    
 </div>
 

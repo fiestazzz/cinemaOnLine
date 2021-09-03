@@ -9,8 +9,14 @@ import { LoginService } from 'src/app/services/login/login.service';
 })
 export class HomeComponent implements OnInit {
 
+  showFiller = false;
+  showFiller2 = false;
+  showFiller3 = false;
+  showFiller4 = false;
  
+
   constructor() { }
+
 
   ngOnInit(): void {
   }

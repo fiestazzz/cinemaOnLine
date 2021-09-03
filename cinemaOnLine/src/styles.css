@@ -2,7 +2,9 @@
 
 body { 
 height: 100%;width: 100%;
-background: linear-gradient(grey, black); 
+/*background: linear-gradient(grey, black); */
+background-image: url('src/assets/multicolored-honeycomb-background-red-honeycomb-background-black-background-honeycomb-abstractions-red-polygon-background.jpg');
+background-repeat: repeat-y;
 margin: 0;
 font-family: Roboto, "Helvetica Neue", sans-serif;
 }

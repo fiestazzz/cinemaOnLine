@@ -24,3 +24,17 @@
    margin: 2%;
    color: white;
 }
+
+ ul li a:hover{
+    color: #F44336;
+}
+
+
+
+.footer a{
+    color:white
+}
+
+.footer a:hover{
+    color:#F44336;
+}

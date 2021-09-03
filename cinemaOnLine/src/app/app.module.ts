@@ -56,6 +56,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterSuccessComponent } from './components/register-success/register-success.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MoviesComponent } from './components/movies/movies.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { CinemasComponent } from './components/cinemas/cinemas.component';
+
 
 
 
@@ -67,7 +70,9 @@ import { MoviesComponent } from './components/movies/movies.component';
     RegisterFormComponent,
     HomeComponent,
     RegisterSuccessComponent,
-    MoviesComponent
+    MoviesComponent,
+    ContactsComponent,
+    CinemasComponent
   ],
   imports: [
     BrowserModule,
@@ -121,7 +126,8 @@ import { MoviesComponent } from './components/movies/movies.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    
 
 
   ],
