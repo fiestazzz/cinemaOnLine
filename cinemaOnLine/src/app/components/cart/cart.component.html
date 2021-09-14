@@ -1,0 +1,74 @@
+<div class="container-fluid">
+
+<kendo-grid
+#kendoGrid="kendoGrid"
+[data]="GridDataResult"
+[sort]="gridState.sort"
+[skip]="gridState.skip"
+[filter]="gridState.filter"
+[pageSize]="gridState.take"
+[group]="gridState.group"
+[pageable]="true"
+[loading]="loading"
+[columnMenu]="true"
+[selectable]="{enabled:true,checkboxOnly:false,mode:'single'}"
+[groupable]="true"
+[sortable]="true"
+(dataStateChange)="GridDataStateChange($event)"
+style="height:80%;box-shadow: 5px 5px 5px #F44336;border-radius: 5px;"
+filterable="menu"
+kendoGridSelectBy="cod_operazione"
+>
+<ng-template kendoGridToolbarTemplate >
+    <button kendoGridPDFCommand ><i class="fas fa-file-pdf"></i> Export to PDF</button>
+</ng-template>
+<kendo-grid-column width="100" field="cod_operazione" title="Numero Prenotazione">
+
+</kendo-grid-column>
+<kendo-grid-column width="200" field="film.title" title="Movie title">
+
+</kendo-grid-column>
+<kendo-grid-column width="200" field="film.cinema.name" title="Cinema">
+
+</kendo-grid-column>
+<kendo-grid-column width="200" field="ora_proiezione" title="Time">
+    <!--<ng-template
+    kendoGridFilterMenuTemplate
+    let-column="column"
+    let-filter="filter"
+    let-filterService="filterService"
+    >
+    <kendo-multiselect
+    style="width:200px"
+    [data]="times"
+    textField="title"
+    value="value"
+    [value]="Filters(filter)"
+    (valueChange)="TimesChange($event,filterService)"
+
+    ></kendo-multiselect>
+    </ng-template>-->
+</kendo-grid-column>
+<kendo-grid-column width="200" field="data" title="Date">
+    <ng-template kendoGridCellTemplate let-dataItem>
+        <span>{{datePipe.transform(dataItem.data,'dd-MM-yyyy')}}</span>
+    </ng-template>
+</kendo-grid-column>
+<kendo-grid-column width="200" field="quantity" title="Quantity">
+
+</kendo-grid-column>
+<kendo-grid-column width="200" field="visitatore.login" title="Username">
+
+</kendo-grid-column>
+<kendo-grid-column width="200" field="visitatore.cod_visitatore" title="Name">
+    <ng-template kendoGridCellTemplate let-dataItem>
+       <span>{{dataItem.visitatore.name + ' ' + dataItem.visitatore.surname}}</span>
+    </ng-template>
+</kendo-grid-column>
+<kendo-grid-column width="200" field="visitatore.email" title="Email">
+
+</kendo-grid-column>
+
+<kendo-grid-pdf fileName="Tickets.pdf" [allPages]="true"></kendo-grid-pdf>
+</kendo-grid>
+</div>

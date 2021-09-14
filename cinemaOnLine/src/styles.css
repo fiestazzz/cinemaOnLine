@@ -2,10 +2,15 @@
 
 body { 
 height: 100%;width: 100%;
-/*background: linear-gradient(grey, black); */
-background-image: url('src/assets/multicolored-honeycomb-background-red-honeycomb-background-black-background-honeycomb-abstractions-red-polygon-background.jpg');
-background-repeat: repeat-y;
+/*background: linear-gradient(black, black);*/
+background-image: url('./assets/dark-orange-backdrop-with-lines-repeated-lines-on-abstract-background-with-gradient-pattern-for-booklets-leaflets-vector.jpg');
+/*background-size:100% 100%;*/
+
 margin: 0;
 font-family: Roboto, "Helvetica Neue", sans-serif;
+font-weight: bold;
+
 }
+
+
 

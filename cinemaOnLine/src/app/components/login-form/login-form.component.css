@@ -22,8 +22,8 @@
   }
 
 .container{
-    margin-top: 10%;
-    height: 60vh;
+    margin-top: 15%;
+    height: 55vh;
 }
 
 
@@ -39,7 +39,8 @@
     background-color: white;
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 10px #888888;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #F44336;
 }
 
 .validForm{

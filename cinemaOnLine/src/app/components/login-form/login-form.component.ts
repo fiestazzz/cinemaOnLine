@@ -47,8 +47,15 @@ export class LoginFormComponent implements OnInit {
         this.IsFormValid = true;
         if(this.visitor){
           this.loginService.visitorIntoService.next(this.visitor);
-          this.router.navigate(['/home']);
-        
+          if(this.visitor.cod_visitatore == 9){
+            this.router.navigate(['/configuration']);
+          }
+          else if((localStorage.getItem('movie') != null) && (localStorage.getItem('time'))){
+            this.router.navigate(['/buyTicket']);
+          }
+          else{
+            this.router.navigate(['/home']);
+          }
         }
       })
     }
@@ -56,6 +63,8 @@ export class LoginFormComponent implements OnInit {
       this.IsFormValid = false;
     }
   }
+
+
 
 
 }

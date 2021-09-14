@@ -1,0 +1,42 @@
+.contenitore{
+    height:70vh;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.title{
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+.container{
+    background-color: white;
+    height: 60%;
+    box-shadow: 5px 5px 5px #F44336;
+    border-radius: 5px;
+}
+
+.each-input{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenitore-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contenitore-button{
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.contenitore-button button{
+    margin: 1%;
+}

@@ -8,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ContactsComponent implements OnInit {
 
   panelOpenState = false;
+  showMe:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  show(){
+    this.showMe = !this.showMe;
   }
 
 }

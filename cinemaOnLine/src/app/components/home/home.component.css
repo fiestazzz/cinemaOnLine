@@ -2,11 +2,18 @@
     height: 100%;
 }
 
-
+.contenitore-carosello{
+    border-bottom: 0.5px solid #F44336 ;
+    margin: 0;
+    padding: 0;
+}
+.carosello{
+    margin: 0;
+}
 
 img{
     width: 400px ;
-    height:700px;
+    height:600px;
    
 }
 
@@ -17,16 +24,14 @@ img{
     flex-direction: column;
     align-items: center;
     font-size: large;
-    box-shadow: 5px 10px #888888;
-    background-color: white;
+    
     padding: 10px;
     border-radius: 5px;
+    color: white;
+    font-size: 1.5em;
 }
 
-.title{
-    text-decoration: underline;
-    text-decoration-color:#F44336 ;
-}
+
 
 .contenitore-sezione-centrale{
     margin-top: 5%;
@@ -34,56 +39,3 @@ img{
 
 
 
-.example-container-sidebar {
-    width: 500px;
-    height: 300px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    width: 100%;
-    box-shadow: 5px 10px #888888;
-    border-radius: 5px;
-  }
-  
-  .example-sidenav-content {
-    display: flex;
-    height:100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .example-sidenav {
-    padding: 20px;
-  }
-
-  .each-movie{
-      width: 100%;
-      margin-top: 2%;
-  
-  }
-
-  .example-sidenav-content img{
-      width: 100%;
-      height:inherit;
-  }
-
-  .each-button{
-      margin-left: 1%;
-      margin-bottom: 1%;
-  }
-
-  .titolo-drawer{
-      font-weight: bold;
-  }
-  ul{
-      list-style-type:square;
-  }
-
-  .titolo-movie{
-      width:100%;
-      
-  }
-  .inside-titolo{
-    color: white;
-    text-decoration: underline;
-    text-decoration-color: #F44336;
-   
-}

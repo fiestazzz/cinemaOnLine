@@ -1,4 +1,42 @@
+
 <div class="container">
+    <div class="immagine">
+      <img src="../../../assets/contatti-pagina-wordpress.png" alt="foto-contatti">
+    </div>
+    <div class="show">
+      <button mat-raised-button color="warn" (click)="show()"  >Show contacts</button>
+    </div>
+<div class="toBeShown" *ngIf="showMe">
+    <div class="pannello">
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+            Contacts
+            </mat-panel-title>
+            <mat-panel-description>
+              Location
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Via delle palme 15, Torino, 10134</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+  </div>
+  <div class="pannello">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+              Contacts
+              </mat-panel-title>
+              <mat-panel-description>
+              Telephone number / Customer Service
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>0115689545</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+    </div>
   <div class="pannello">
     <mat-accordion>
       <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -7,86 +45,42 @@
           Contacts
           </mat-panel-title>
           <mat-panel-description>
-            Location
+          Facebook
           </mat-panel-description>
         </mat-expansion-panel-header>
-        <p>Via delle palme 15, Torino, 10134</p>
+        <p> <a href="http://it-it.facebook.it">www.facebook.com/cinemaOnLine</a></p>
       </mat-expansion-panel>
     </mat-accordion>
-</div>
-<div class="pannello">
-      <mat-accordion>
-        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-            Contacts
-            </mat-panel-title>
-            <mat-panel-description>
-            Telephone number / Customer Service
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>0115689545</p>
-        </mat-expansion-panel>
-      </mat-accordion>
   </div>
-<div class="pannello">
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>
-        <mat-panel-title>
-        Contacts
-        </mat-panel-title>
-        <mat-panel-description>
-        It department
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>0115689546</p>
-    </mat-expansion-panel>
-  </mat-accordion>
-</div>
-<div class="pannello">
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>
-        <mat-panel-title>
-        Contacts
-        </mat-panel-title>
-        <mat-panel-description>
-        Facebook
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p> <a href="http://it-it.facebook.it">www.facebook.com/cinemaOnLine</a></p>
-    </mat-expansion-panel>
-  </mat-accordion>
-</div>
-<div class="pannello">
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>
-        <mat-panel-title>
-        Contacts
-        </mat-panel-title>
-        <mat-panel-description>
-        Twitter
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p> <a href="https://twitter.com/?lang=it">www.twitter.com/cinemaOnLine</a></p>
-    </mat-expansion-panel>
-  </mat-accordion>
-</div>
-<div class="pannello">
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>
-        <mat-panel-title>
-        Contacts
-        </mat-panel-title>
-        <mat-panel-description>
-        Twitter
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p> <a href="https://www.instagram.com/">www.instagram.com/cinemaOnLine</a></p>
-    </mat-expansion-panel>
-  </mat-accordion>
-</div>
+  <div class="pannello">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+          <mat-panel-title>
+          Contacts
+          </mat-panel-title>
+          <mat-panel-description>
+          Twitter
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p> <a href="https://twitter.com/?lang=it">www.twitter.com/cinemaOnLine</a></p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="pannello">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+          <mat-panel-title>
+          Contacts
+          </mat-panel-title>
+          <mat-panel-description>
+          Twitter
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p> <a href="https://www.instagram.com/">www.instagram.com/cinemaOnLine</a></p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>  
 </div>

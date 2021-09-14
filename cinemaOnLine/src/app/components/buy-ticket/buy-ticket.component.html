@@ -1,0 +1,81 @@
+
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">{{titleMessage}}</h4>
+      <button type="button" class="btn-close close pull-right"  aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     {{message}}
+    </div>
+</ng-template>
+
+
+
+
+<div class="contenitore">
+    <div class="title">
+        <h2>Buy Ticket</h2>
+    </div>
+    <div class="container">
+        <div class="titolo">
+            <h4>Confirm details</h4>
+        </div>
+        <div class="contenitore-inputs">
+            <div class="each-input">
+                <mat-form-field appearance="fill">
+                    <mat-label>Movie</mat-label>
+                    <input matInput placeholder="Placeholder" readonly [(ngModel)]="movieTitle">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+            </div>
+            <div class="each-input">
+                <mat-form-field appearance="fill">
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="picker" readonly [(ngModel)]="date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker ></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="each-input">
+                <mat-form-field appearance="fill">
+                    <mat-label>Time</mat-label>
+                    <input matInput placeholder="Placeholder" readonly [(ngModel)]="timeSelected">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+            </div>
+            <div class="each-input">
+                <mat-form-field appearance="fill">
+                    <mat-label>Name on ticket(Used to pay at reception)</mat-label>
+                    <input matInput placeholder="Placeholder" readonly [(ngModel)]="nameOnTicket">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+            </div>
+            <div class="each-input">
+                <mat-form-field appearance="fill">
+                    <mat-label>Select quantity(Max 5)</mat-label>
+                    <mat-select [(ngModel)]="quantity" (ngModelChange)="calculatePrice($event,template)" >
+                      <mat-option [value]="1">1</mat-option>
+                      <mat-option [value]="2">2</mat-option>
+                      <mat-option [value]="3">3</mat-option>
+                      <mat-option [value]="4">4</mat-option>
+                      <mat-option [value]="5">5</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="each-input">
+                <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-label>Price</mat-label>
+                    <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="price" readonly>
+                    <span matPrefix>€&nbsp;</span>
+                    <span matSuffix>.00</span>
+                  </mat-form-field>
+            </div>
+            <div class="contenitore-button">
+                <button mat-raised-button color="warn" type="submit" (click)="buy()" [disabled]="disable">BUY</button>
+                <button mat-raised-button color="warn" (click)="reset()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

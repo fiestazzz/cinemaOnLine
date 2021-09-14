@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-cinemas',
   templateUrl: './cinemas.component.html',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CinemasComponent implements OnInit {
 
- 
-  constructor() { }
+  
+  constructor() {
+    
+    
+   }
 
   ngOnInit(): void {
+  
   }
 
 }

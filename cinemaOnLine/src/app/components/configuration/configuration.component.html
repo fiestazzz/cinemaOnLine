@@ -1,0 +1,155 @@
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">{{titleMessage}}</h4>
+      <button type="button" class="btn-close close pull-right"  aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     {{modalMessage}}
+    </div>
+  </ng-template>
+
+
+
+
+
+
+
+<div class="title">
+    <h1>Welcome to the admin page</h1>
+</div>
+
+
+    <div class="container">
+        <div class="contenitore-add">
+            <div class="title-add">
+                <h3>Fill in the form to add a movie</h3>
+            </div>
+            <div class="main-add">
+                <div class="each-input">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Enter movie title <span class="formValid" *ngIf="IsFormValid == false">*</span></mat-label>
+                            <input matInput placeholder="Title" [(ngModel)]="title">
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <mat-form-field appearance="fill" floatLabel="always">
+                        <mat-label>Amount</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="price">
+                        <span matPrefix>€&nbsp;</span>
+                        <span matSuffix>.00</span>
+                    </mat-form-field>
+                </div>
+                
+                <div class="each-input">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter movie genre <span class="formValid" *ngIf="IsFormValid == false">*</span></mat-label>
+                        <input matInput placeholder="Genre" [(ngModel)]="genre">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select country</mat-label>
+                        <mat-select [(ngModel)]="country"  name="country">
+                        <mat-option value="IT">IT</mat-option>
+                        <mat-option value="USA">USA</mat-option>
+                        <mat-option value="FRANCE">FRANCE</mat-option>
+                        <mat-option value="SPAIN">SPAIN</mat-option>
+                        <mat-option value="UK">UK</mat-option>
+                        </mat-select>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <mat-form-field appearance="fill" floatLabel="always">
+                        <mat-label>Enter duration in minutes</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="duration">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter movie distribution <span class="formValid" *ngIf="IsFormValid == false">*</span></mat-label>
+                        <input matInput placeholder="Distribution" [(ngModel)]="distribution">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select afternoon time</mat-label>
+                        <mat-select [(ngModel)]="afternoonTime"  name="afternoonTime">
+                        <mat-option value="10:15">10:15</mat-option>
+                        <mat-option value="18:15">18:15</mat-option>
+                        </mat-select>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select evening time</mat-label>
+                        <mat-select [(ngModel)]="eveningTime"  name="eveningTime">
+                        <mat-option value="12:15">12:15</mat-option>
+                        <mat-option value="20:15">20:15</mat-option>
+                        </mat-select>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select night time</mat-label>
+                        <mat-select [(ngModel)]="nightTime"  name="nightTime">
+                        <mat-option value="15:15">15:15</mat-option>
+                        <mat-option value="22:15">22:15</mat-option>
+                        </mat-select>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select Cinema</mat-label>
+                        <mat-select [(ngModel)]="cinemaId" (ngModelChange)="findCinema($event)" name="cinema">
+                        <mat-option value="1">The Space Cinema</mat-option>
+                        <mat-option value="2">Cinema Romano</mat-option>
+                        <mat-option value="3">Cinema Lux</mat-option>
+                        </mat-select>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="each-input">
+                    <div class="conferma">
+                        <button mat-raised-button color="warn" (click)="addMovie(template)">Insert</button>
+                    </div>
+                </div>
+                <div class="each-input">
+                    <div class="reset">
+                        <button mat-raised-button color="warn" (click)="reset()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="title-add">
+            <h3>Choose a movie to delete it from the list</h3>
+        </div>
+        <div class="contenitore-delete">
+            <div class="each-input input-delete">
+                <mat-form-field appearance="fill">
+                        <mat-label>Select Movie</mat-label>
+                        <mat-select [(ngModel)]="idMovie" name="idMovie" >
+                        <mat-option *ngFor="let movie of movies" value="{{movie.cod_film}}">{{movie.title}}</mat-option>
+                        </mat-select>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="each-input buttons-delete">
+                <div class="conferma">
+                    <button mat-raised-button color="warn" (click)="deleteMovie(template)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+

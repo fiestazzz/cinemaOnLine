@@ -11,7 +11,7 @@ export class LoginService {
 
   constructor(private http:HttpClient) { }
 
-  url:string = 'http://localhost:8081/visitors/getByLogin';
+  url:string = 'http://104.218.55.70:8080/cinemaonline3-1.0.0/visitors/getByLogin';
 
   visitorIntoService = new Subject<any>();
 

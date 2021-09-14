@@ -1,8 +1,32 @@
 .container{
-    height: 75vh;
+    height: 100%;
+    margin-top: 10%;
 }
 
-.pannello{
-    margin-top: 3%;
-    box-shadow: 5px 10px #888888;
+.pannello {
+    padding-top: 2%;
+    margin-top: 1%;
+   
 }
+
+.immagine img{
+    height: 500px;
+    width: 90%;
+}
+
+.immagine{
+    
+    height: 100%;
+}
+
+.example-sidenav-content button{
+    font-size: 1.5em;
+}
+
+.show{
+    width: 100%;
+    text-align: center;
+}
+
+
+

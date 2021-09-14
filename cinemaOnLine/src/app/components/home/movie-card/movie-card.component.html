@@ -1,0 +1,56 @@
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">{{titleMessage}}</h4>
+      <button type="button" class="btn-close close pull-right"  aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     {{message}}
+    </div>
+  </ng-template>
+
+
+
+
+<div class="each-movie">
+    <div class="titolo-movie">
+        <span class="inside-titolo"><h2>---- {{movie.title}} ----</h2></span>
+    </div>
+    <mat-drawer-container class="example-container-sidebar" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            <ul>
+                <li><span class="titolo-drawer">Genere:</span>{{movie.genre}}</li>
+                <li><span class="titolo-drawer">Paese:</span> {{movie.country}}</li>
+                <li><span class="titolo-drawer">Durata:</span>{{movie.duration}} min</li>
+                <li><span class="titolo-drawer">Distribuzione:</span>{{movie.distribution}}</li>
+                <li><span class="titolo-drawer">Cinema:</span>{{movie.cinema.name}}</li>
+            </ul>
+            <div *ngIf="showFiller" class="example-button-row">
+              <mat-form-field >
+                <input matInput [matDatepicker]="picker" [(ngModel)]="dateSelected" [min]="minDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div *ngIf="dateSelected">
+              <button class="each-button" mat-raised-button (click)="buyTicket(movie, movie.afternoonTime,template)">{{movie.afternoonTime}}</button>
+              <button class="each-button" mat-raised-button (click)="buyTicket(movie, movie.eveningTime,template)">{{movie.eveningTime}}</button>
+              <button class="each-button" mat-raised-button (click)="buyTicket(movie, movie.nightTime,template)">{{movie.nightTime}}</button>
+            </div>
+            <button mat-button color="warn" (click)="showFiller = !showFiller" mat-raised-button>
+                <span *ngIf="showFiller == false">Scegli Data</span>
+                <span *ngIf="dateSelected" (click)="dateSelected = null"  >Reset</span>
+              </button>
+            
+        </mat-drawer>
+      
+        <div class="example-sidenav-content">
+            <img src={{img.description}} alt="movie-template">
+          <button mat-button color="warn"  type="button" mat-button (click)="drawer.toggle()">
+           Info
+          </button>
+        </div>
+      </mat-drawer-container>
+</div>
+

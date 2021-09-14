@@ -1,0 +1,32 @@
+.Success{
+
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px #F44336;
+    background-color: white;
+    margin-top: 10%;
+    border-radius: 5px;
+
+}
+
+.paragrafo{
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.container{
+    margin-top: 10%;
+    height: 68vh;
+}

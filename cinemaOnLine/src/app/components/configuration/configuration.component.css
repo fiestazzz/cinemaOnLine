@@ -1,0 +1,90 @@
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10%;
+    box-shadow: 5px 5px 5px #F44336;
+}
+
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+.title-add{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.title-add h3{
+    font-size: 1.5em;
+    font-style: italic;
+
+}
+
+.each-input{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    margin-top: 1%;
+}
+
+.main-add{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenitore-delete{
+    display: flex;
+}
+
+
+.input-delete{
+    width: 50%;
+}
+
+.buttons-delete{
+    width: 50%;
+}
+
+
+:host ::ng-deep .p-button {
+    margin: 0 .5rem 0 0;
+    min-width: 10rem;
+}
+
+p {
+    margin: 0;
+}
+
+.confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host ::ng-deep .p-dialog .p-button {
+    min-width: 6rem;
+}
+
+p-dialog{
+    background-color: white;
+}

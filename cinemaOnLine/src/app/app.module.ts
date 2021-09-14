@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -58,6 +57,28 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MoviesComponent } from './components/movies/movies.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { CinemasComponent } from './components/cinemas/cinemas.component';
+import { MovieCardComponent } from './components/home/movie-card/movie-card.component';
+import { ConfigurationComponent } from './components/configuration/configuration.component';
+import { MessageService } from 'primeng/api';
+import {ToastModule} from 'primeng/toast';
+import {DialogModule} from 'primeng/dialog';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { BuyTicketComponent } from './components/buy-ticket/buy-ticket.component';
+import { BuyTicketSuccessComponent } from './components/buy-ticket-success/buy-ticket-success.component';
+import { CartComponent } from './components/cart/cart.component';
+import { GridModule, PDFModule } from '@progress/kendo-angular-grid';
+import { DropDownsModule } from "@progress/kendo-angular-dropdowns";
+import { MultiSelectModule } from "@progress/kendo-angular-dropdowns";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
+
+
+
+
+
+
 
 
 
@@ -72,7 +93,12 @@ import { CinemasComponent } from './components/cinemas/cinemas.component';
     RegisterSuccessComponent,
     MoviesComponent,
     ContactsComponent,
-    CinemasComponent
+    CinemasComponent,
+    MovieCardComponent,
+    ConfigurationComponent,
+    BuyTicketComponent,
+    BuyTicketSuccessComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -127,11 +153,21 @@ import { CinemasComponent } from './components/cinemas/cinemas.component';
     FormsModule,
     ReactiveFormsModule,
     CarouselModule.forRoot(),
-    
+    ToastModule,
+    MatRippleModule,
+    DialogModule,
+    ModalModule.forRoot(),
+    GridModule,
+    PDFModule,
+    DropDownsModule,
+    MultiSelectModule,
+    NgbModule,
+  
+
 
 
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

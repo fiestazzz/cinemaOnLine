@@ -6,5 +6,13 @@ export interface MovieDTO{
     startDate:Date,
     endDate:Date,
     price:number,
+    genre:string,
+    country:string,
+    duration:number,
+    distribution:string
+    morningTime:string,
+    afternoonTime:string,
+    eveningTime:string,
+    nightTime:string,
     cinema:CinemaDTO
 }

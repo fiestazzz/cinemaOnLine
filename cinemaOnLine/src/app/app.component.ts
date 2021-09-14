@@ -13,25 +13,27 @@ export class AppComponent {
   title = 'cinemaOnLine';
 
   visitorFromService:Subscription;
-  visitor:VisitorDTO
-
+  visitor:VisitorDTO;
+  isShown = false;
 
   constructor(private loginService:LoginService) {
     this.visitorFromService = this.loginService.visitorIntoService.subscribe(($event)=>{
       this.setVisitor($event);
-      sessionStorage.setItem('Login',JSON.stringify(this.visitor));
+      localStorage.setItem('Login',JSON.stringify(this.visitor));
     })
    }
 
   ngOnInit(): void {
+    this.setVisitor(JSON.parse(localStorage.getItem('Login'))); 
   }
+
 
   setVisitor($event){
     this.visitor = $event
   }
 
   destroySession(){
-    sessionStorage.clear();
+    localStorage.clear();
     this.visitor = null;
   }
   

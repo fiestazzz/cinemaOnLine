@@ -4,10 +4,10 @@ import { VisitorDTO } from "./visitor";
 export interface TicketDTO{
     cod_operazione:number,
     visitatore:VisitorDTO,
-    ora_proiezione:number,
-    data:Date,
+    ora_proiezione:string,
+    data:string,
     tipo_pagamento:string,
     quantity:number,
-    movie:MovieDTO
+    film:MovieDTO
 
 }

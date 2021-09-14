@@ -1,0 +1,80 @@
+.example-container-sidebar {
+    width: 400px;
+    height: 250px;
+    /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    height: 100%;
+  }
+
+  .example-sidenav span{
+      margin-right: 0.5%;
+      font-style: italic;
+      font-weight: 200;
+  }
+
+  .each-movie{
+      width: 100%;
+      margin-top: 2%;
+      
+  
+  }
+
+  .example-sidenav-content img{
+      width: 100%;
+      height:inherit;
+      border-radius: 5px;
+  }
+
+  .each-button{
+      margin-left: 1%;
+      margin-bottom: 1%;
+  }
+
+  .titolo-drawer{
+      font-weight: bold;
+  }
+  ul{
+      list-style-type:square;
+  }
+
+  .titolo-movie{
+      width:100%;
+      color: white;
+      
+  }
+  .inside-titolo{
+    text-decoration: underline;
+    text-decoration-color: #F44336;
+   
+}
+
+.example-container-sidebar .example-sidenav-content button{
+    font-size: 1.3em;
+}
+
+::ng-deep.mat-form-field{
+    color: #F44336;
+    font-size: 1.2em;
+    
+}
+
+::ng-deep.mat-form-field .mat-datepicker-toggle{
+    color:#F44336;
+    font-size: 1.4em;
+}
+

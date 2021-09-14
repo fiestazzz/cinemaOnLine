@@ -8,7 +8,7 @@ import { VisitorDTO } from 'src/app/models/visitor';
 })
 export class RegisterService {
 
-  url:string = "http://localhost:8081/visitors/register";
+  url:string = "http://104.218.55.70:8080/cinemaonline3-1.0.0/visitors/register";
 
   constructor(private http:HttpClient) { }
 
