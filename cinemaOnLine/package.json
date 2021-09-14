@@ -39,7 +39,7 @@
     "@progress/kendo-angular-treeview": "^5.0.0",
     "@progress/kendo-data-query": "^1.0.0",
     "@progress/kendo-drawing": "^1.0.0",
-    "@progress/kendo-licensing": "^1.2.0",
+    "@progress/kendo-licensing": "^1.0.2",
     "@progress/kendo-theme-default": "latest",
     "bootstrap": "^4.6.0",
     "chart": "^0.1.2",
