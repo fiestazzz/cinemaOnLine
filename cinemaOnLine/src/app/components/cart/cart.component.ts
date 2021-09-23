@@ -84,7 +84,9 @@ export class CartComponent implements OnInit {
 
   LoadGridData(){
     this.ticketService.getTicket().subscribe((data)=>{
-      this.GridDataList = data;
+      const user = JSON.parse(localStorage.getItem('Login'));
+      const dataPerUser = data.filter((item)=>item.visitatore.cod_visitatore == user.cod_visitatore );
+      this.GridDataList = dataPerUser;
       this.ChangeGridData();
     })
   }

@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
  
  
   movies:MovieDTO[];
-  movieImages:any[]=[{description:"../../../assets/dracula-untold-2014-movie-banner-poster.jpg"},{description:"../../../assets/Oblivion.jpeg"},{description:"../../../assets/darknigth.jpg"},{description:"../../../assets/el-americano-the-movie-2014-cartoon.jpg"}];
+  movieImages:any[]=[{description:"../../../assets/darknigth.jpg"},{description:"../../../assets/Oblivion.jpeg"},{description:"../../../assets/dracula-untold-2014-movie-banner-poster.jpg"},{description:"../../../assets/el-americano-the-movie-2014-cartoon.jpg"}];
   
   constructor(private movieService:MovieService) { }
 

@@ -8,7 +8,7 @@ import { CinemaDTO } from 'src/app/models/cinema';
 })
 export class CinemaService {
 
-  baseUrl:string="http://104.218.55.70:8080/cinemaonline3-1.0.0cinemas";
+  baseUrl:string="http://104.218.55.70:8080/cinemaonline3-1.0.0/cinemas";
 
 
   constructor(private http:HttpClient) { }
